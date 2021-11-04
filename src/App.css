@@ -130,6 +130,7 @@
   }
 
   .nav ul {
+      z-index: 99;
       position: fixed;
       left: -100%;
       top: 5rem;
@@ -154,9 +155,10 @@
 
 
   .auth ul {
+    z-index: 99;
       position: fixed;
       left: -100%;
-      top: 25rem;
+      top: 24rem;
       flex-direction: column;
       background-color: #fff;
       width: 100%;
@@ -210,7 +212,7 @@
   content: url('./assets/logoassets/iconmonstr-arrow-64.svg');
   position: absolute;
   width: 5%;
-  left: 0;
+  left: 15%;
   height: 100%;
   border-bottom-left-radius: 45px;
   border-top-left-radius: 45px;
@@ -224,7 +226,7 @@
 .carosel .righthand{
   content: url('assets/logoassets/iconmonstr-arrow.svg');
   position: absolute;
-  right: 0;
+  right: 15%;
   width: 5%;
   height: 100%;
   border-bottom-right-radius: 45px;
@@ -248,13 +250,18 @@
 .carosel{
   display: flex;
   justify-content: center;
+  z-index: 1;
+  width: 100%;
+  align-items: center;
 }
 
 
 .carosel img{
   border-radius: 45px;
-  width: 100%;
+  width: 70%;
   position: static;
+  height: 50vh;
+  z-index: -1;
 }
 
 .carosel{
@@ -266,12 +273,12 @@
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
     width: 12%;
-    left: 0.2%
+    left: 15%;
   }
   .carosel .righthand{
     border-bottom-right-radius: 45px;
     border-top-right-radius: 45px;
     width: 12%;
-    right: 0.2%;
+    right: 15%;
   }
 }

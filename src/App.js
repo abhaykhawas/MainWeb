@@ -1,15 +1,42 @@
 // import logo from './logo.svg';
 import React, {useState} from 'react';
 import './App.css';
-import logo from "./assets/Img/caroselImg1.jpeg"; 
+// import logo from "./assets/Img/caroselImg1.jpeg"; 
+
+const imgUrls = [
+    'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*',
+    'https://www.thesprucepets.com/thmb/sfuyyLvyUx636_Oq3Fw5_mt-PIc=/3760x2820/smart/filters:no_upscale()/adorable-white-pomeranian-puppy-spitz-921029690-5c8be25d46e0fb000172effe.jpg',
+    'https://post.healthline.com/wp-content/uploads/2020/08/3180-Pug_green_grass-732x549-thumbnail-732x549.jpg'
+]
+
+
 
 function App() {
   const [state, setState] = useState(false)
+  const [imgState, setimgState] = useState(0)
 
   const hamPress = () => {
       setState(!state)
       console.log(state)
   }
+
+  const leftFunc = () =>{
+    if(imgState === 0){
+        setimgState(2)
+    }
+    else{
+        setimgState(imgState-1)
+    }
+  }
+
+   const rightFunc = () =>{
+    if(imgState === 2){
+        setimgState(0)
+    }
+    else{
+        setimgState(imgState+1)
+    }
+   }
 
   return ( 
     <div className="container">
@@ -41,9 +68,9 @@ function App() {
             </div>
         </div>
         <div className="carosel">
-            <div className="lefthand"></div>
-            <img src={logo} alt="logo" />
-            <div className="righthand"></div>            
+            <div className="lefthand" onClick = {leftFunc}></div>
+            <img src={imgUrls[imgState]} alt="logo" />
+            <div className="righthand" onClick = {rightFunc}></div>            
         </div>
     </div>
   );
