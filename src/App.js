@@ -72,7 +72,40 @@ function App() {
             <img src={imgUrls[imgState]} alt="logo" />
             <div className="righthand" onClick = {rightFunc}></div>            
         </div>
+
+
+      <div className="bodyMain">
+        <div className="dogForm">
+            <h2>Do you need a doggo ?</h2>
+            <form className="mainForm">
+                <label>Name</label>
+                <input type="text" placeholder="Your Full Name"></input>
+                <label>Email</label>
+                <input type="text" placeholder="Your Email"></input>
+                <label>Breed</label>
+                <select>
+                    <option selected disabled>--choose your fav breed</option>
+                    <option>Pomsky</option>
+                    <option>Pom</option>
+                    <option>Lab</option>
+                    <option>Poodle</option>
+                    <option>Husky</option>
+                    <option>Doodle</option>
+                </select>  
+                <br/>
+                <br/>
+                <input type="submit"></input>  
+            </form>
+        </div>
+
+        <div>
+            <h1>Dogs are important part of life and we will help you to find your perfect partner</h1>
+        </div>
+
+       </div>
+
     </div>
+
   );
 }
 

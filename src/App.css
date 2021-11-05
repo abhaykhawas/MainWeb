@@ -291,3 +291,97 @@
 
   }
 }
+
+
+label{
+  display: block;
+  margin-top: 10px;
+}
+
+.dogForm h2{
+  background-color: rgba(225, 222, 150, 1);
+  margin-bottom: 0;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-top-right-radius: 45px;
+  border-top-left-radius: 45px;
+}
+
+.dogForm form{
+  
+  background-color: rgba(225, 222, 150, 1);
+  opacity: 0.5;
+  margin-top: -10px;
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto;
+  border-bottom-right-radius: 45px;
+  border-bottom-left-radius: 45px;
+  margin-bottom: 10px;
+}
+
+input{
+  border-radius: 45px;
+  padding: 10px;
+  border: none;
+}
+
+select{
+  border-radius: 45px;
+  padding: 10px;
+  border: none;
+}
+
+input:focus, select:focus{
+  outline: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  .dogForm form{
+    width: 100%;
+    position: relative;
+    right: 35px;
+    padding-right: 35px;
+  }
+  .dogForm h2{
+    width: 100%;
+    position: relative;
+    right: 35px;
+    padding-right: 35px;
+
+  }
+}
+
+.bodyMain{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+h1{
+  width: 50%;
+  margin-left: 10%;
+}
+
+.bodyMain .dogForm{
+  margin-left: 18%;
+  width: 70%;
+}
+
+@media only screen and (max-width: 1000px){
+  .bodyMain{
+    flex-direction: column;
+  }
+
+  .bodyMain .dogForm{
+    width: 100%;
+    margin-left: -10%;
+  }
+
+  h1{
+    width: 100%;
+    margin-left: -10%;
+  }
+}
